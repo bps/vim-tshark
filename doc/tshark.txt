@@ -1,0 +1,34 @@
+*tshark.txt*    Plugin for reading a pcap via tshark
+
+Author: Brian Smyth <http://bsmyth.net>
+License: Same terms as Vim itself (see |license|)
+
+This plugin is only available if 'compatible' is not set and Vim has the
+folding feature.
+
+SUMMARY
+
+This plugin allows you to :edit a pcap file that you collected via tcpdump or
+tshark. It will use tshark to make the pcap human-readable and provides
+support for folding the pcap, so you can view the high level at a glance and
+open folds to get more information.
+
+CONFIGURATION
+
+g:tshark_nested_folds
+    Set true to create a fold for each protocol layer. Otherwise, you'll get
+    each frame as a fold.
+g:tshark_summary_opts
+    Set the tshark command line options for the foldtext summaries.
+g:tshark_detail_opts
+    Set the tshark command line options for the detailed dump.
+g:tshark_bin
+    Set the tshark binary, including a full path if needed.
+
+ABOUT
+
+Check for updates at GitHub:
+
+http://github.com/bps/vim-tshark
+
+ vim:et:ft=help:
